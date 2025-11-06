@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReadingList.Infrastructure.Models
+namespace ReadingList.Domain.Models
 {
-    internal class Book
+    public class Book
     {
         static int _nextId;
 
-        private int _rating;
+        private double _rating;
         private int _yearPublished;
 
         public int Id { get; private set; }
@@ -31,7 +31,7 @@ namespace ReadingList.Infrastructure.Models
         public uint Pages { get; set; }
         public string Genre { get; set; } = "";
         public bool Finished { get; set; } = false;
-        public int Rating
+        public double Rating
         {
             get => _rating;
             set
@@ -44,7 +44,7 @@ namespace ReadingList.Infrastructure.Models
             }
         }
 
-        public Book(string title, string author, int yearPublished, uint pages, string genre, int rating, bool finished = false)
+        public Book(string title, string author, int yearPublished, uint pages, string genre, double rating, bool finished = false)
         {
             Title = title;
             Author = author;
