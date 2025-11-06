@@ -1,0 +1,43 @@
+﻿using System.Globalization;
+using ReadingList.Domain.Models;
+using ReadingList.Application.Interfaces;
+
+namespace ReadingList.Infrastructure.Repositories;
+
+public class CSVImporter : IImporter<Book>
+{
+    public async Task<IEnumerable<Book>> ImportFromFileAsync(params string[] filePaths)
+    {
+        var readTasks = filePaths.Select(async filePath =>
+        {
+            var books = new List<Book>();
+            var lines = await File.ReadAllLinesAsync(filePath);
+
+            foreach (var line in lines.Skip(1)) // skip header
+            {
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                var fields = line.Split(',');
+
+                string title = fields[1];
+                string author = fields[2];
+                int yearPublished = int.Parse(fields[3]);
+                uint pages = uint.Parse(fields[4]);
+                string genre = fields[5];
+                double rating = double.Parse(fields[7]);
+                string finishedString = fields[6];
+                bool finished = finishedString == "yes" ? true : false;
+
+                var book = new Book(title, author, yearPublished, pages, genre, rating, finished);
+                books.Add(book);
+            }
+
+            return books;
+        });
+
+        var results = await Task.WhenAll(readTasks);
+
+        return results.SelectMany(b => b);
+    }
+}
