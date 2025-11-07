@@ -55,12 +55,19 @@ public class BookService
         return Result<IEnumerable<Book>>.Success(all.Value!.OrderByDescending(b => b.Rating).Take(n));
     }
 
-    public Result<IEnumerable<Book>> BooksByAuthor(string name)
+    public Result<IEnumerable<Book>> BooksByAuthor(string text)
     {
         var all = Repository.GetAll();
         if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
-        // your spec says case-insensitive contains; preserving your current equality logic
-        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Author == name));
+
+        if (string.IsNullOrWhiteSpace(text))
+            return Result<IEnumerable<Book>>.Success(Enumerable.Empty<Book>());
+
+        return Result<IEnumerable<Book>>.Success(
+            all.Value!.Where(b =>
+                !string.IsNullOrEmpty(b.Author) &&
+                b.Author.IndexOf(text, StringComparison.OrdinalIgnoreCase) >= 0)
+        );
     }
 
     public Result<int> TotalPagesRead()
@@ -105,5 +112,43 @@ public class BookService
             .Select(g => g.Key);
 
         return Result<IEnumerable<string>>.Success(top);
+    }
+
+    public Result MarkFinished(int id)
+    {
+        var got = Repository.GetById(id);
+        if (!got.IsSuccess) return Result.Failure(got.Error!);
+
+        var book = got.Value!;
+        if (!book.Finished)
+        {
+            book.Finished = true;
+            var up = Repository.Update(book);
+            if (!up.IsSuccess) return Result.Failure(up.Error!);
+        }
+        return Result.Success();
+    }
+
+    public Result Rate(int id, double rating)
+    {
+        if (rating < 0 || rating > 5)
+            return Result.Failure("Rating must be between 0 and 5.");
+
+        var got = Repository.GetById(id);
+        if (!got.IsSuccess) return Result.Failure(got.Error!);
+
+        var book = got.Value!;
+        book.Rating = rating;
+
+        var up = Repository.Update(book);
+        return up.IsSuccess ? Result.Success() : Result.Failure(up.Error!);
+    }
+
+
+    public int GetTotalBookCount()
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return 0;
+        return all.Value!.Count();
     }
 }
