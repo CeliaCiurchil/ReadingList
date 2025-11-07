@@ -1,10 +1,12 @@
-﻿namespace ReadingList.Application.Interfaces;
+﻿using ReadingList.Domain;
+
+namespace ReadingList.Application.Interfaces;
 
 public interface IRepository<T>
 {
-    IEnumerable<T> GetAll();
-    T GetById(int id);
-    void Add(T entity);
-    void Update(T entity);
-    void Delete(T entity);
+    Result<T> Add(T entity);
+    Result Delete(T entity);
+    Result<IEnumerable<T>> GetAll();
+    Result<T> GetById(int id);
+    Result<T> Update(T entity);
 }

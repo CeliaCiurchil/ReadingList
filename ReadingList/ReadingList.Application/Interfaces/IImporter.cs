@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ReadingList.Domain;
 namespace ReadingList.Application.Interfaces
 {
     public interface IImporter<T>
     {
-        public Task<IEnumerable<T>> ImportFromFileAsync(params string[] filePaths);
+        Task<Result<IEnumerable<T>>> ImportFromFileAsync(params string[] filePaths);
     }
 }

@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace ReadingList.Domain;
 
-/// <summary>
-/// Represents the outcome of an operation that can either succeed with a value
-/// or fail with an error message — without using exceptions for normal control flow.
-/// </summary>
 public class Result<T>
 {
     public bool IsSuccess { get; }
