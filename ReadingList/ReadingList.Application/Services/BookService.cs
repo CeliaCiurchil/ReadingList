@@ -1,37 +1,110 @@
-﻿using System;
+﻿using ReadingList.Application.Interfaces;
+using ReadingList.Domain;
+using ReadingList.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using ReadingList.Application.Interfaces;
-using ReadingList.Domain.Models;
 namespace ReadingList.Application.Services;
 
 public class BookService
 {
-    IImporter<Book> Importer;
-    IRepository<Book> Repository;
+    private readonly IImporter<Book> Importer;
+    private readonly IRepository<Book> Repository;
+
     public BookService(IImporter<Book> importer, IRepository<Book> repository)
     {
         Importer = importer;
         Repository = repository;
     }
-    public async Task<IEnumerable<Book>> ImportBooksAsync(params string[] filePaths)
+
+    public async Task<Result<IEnumerable<Book>>> ImportBooksAsync(params string[] filePaths)
     {
-        var books = await Importer.ImportFromFileAsync(filePaths);
-        foreach (var book in books)
+        var importResult = await Importer.ImportFromFileAsync(filePaths).ConfigureAwait(false);
+        if (!importResult.IsSuccess)
+            return Result<IEnumerable<Book>>.Failure(importResult.Error!);
+
+        var imported = new List<Book>();
+        foreach (var book in importResult.Value!)
         {
-            Repository.Add(book);
+            var addResult = Repository.Add(book);
+            if (!addResult.IsSuccess)
+            {
+                // keep your existing behavior—just don’t throw
+                Console.WriteLine($"Failed to add book: {addResult.Error}");
+                continue;
+            }
+            imported.Add(addResult.Value!);
         }
-        return books;
+        return Result<IEnumerable<Book>>.Success(imported);
     }
-    public IEnumerable<Book> GetAllBooks()
+
+    public Result<IEnumerable<Book>> GetAllBooks() => Repository.GetAll();
+
+    public Result<IEnumerable<Book>> GetFinishedBooks()
     {
-        return Repository.GetAll();
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
+        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Finished));
     }
-    public IEnumerable<Book> GetFinishedBooks()
+
+    public Result<IEnumerable<Book>> TopN(int n)
     {
-        return Repository.GetAll().Where(b => b.Finished);
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
+        return Result<IEnumerable<Book>>.Success(all.Value!.OrderByDescending(b => b.Rating).Take(n));
+    }
+
+    public Result<IEnumerable<Book>> BooksByAuthor(string name)
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
+        // your spec says case-insensitive contains; preserving your current equality logic
+        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Author == name));
+    }
+
+    public Result<int> TotalPagesRead()
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<int>.Failure(all.Error!);
+        return Result<int>.Success(all.Value!.Where(b => b.Finished).Sum(b => (int)b.Pages));
+    }
+
+    public Result<int> FinishedBooksCount()
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<int>.Failure(all.Error!);
+        return Result<int>.Success(all.Value!.Count(b => b.Finished));
+    }
+
+    public Result<double> AverageRating()
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<double>.Failure(all.Error!);
+        var finished = all.Value!.Where(b => b.Finished);
+        if (!finished.Any()) return Result<double>.Success(0.0);
+        return Result<double>.Success(finished.Average(b => b.Rating));
+    }
+
+    public Result<int> PagesInGenre(string genre)
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<int>.Failure(all.Error!);
+        return Result<int>.Success(all.Value!.Where(b => b.Genre == genre).Sum(b => (int)b.Pages));
+    }
+
+    public Result<IEnumerable<string>> Top3AuthorsByBookCount()
+    {
+        var all = Repository.GetAll();
+        if (!all.IsSuccess) return Result<IEnumerable<string>>.Failure(all.Error!);
+
+        var top = all.Value!
+            .GroupBy(b => b.Author)
+            .OrderByDescending(g => g.Count())
+            .Take(3)
+            .Select(g => g.Key);
+
+        return Result<IEnumerable<string>>.Success(top);
     }
 }
