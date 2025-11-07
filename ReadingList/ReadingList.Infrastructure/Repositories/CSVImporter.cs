@@ -22,7 +22,7 @@ public class CSVImporter : IImporter<Book>
                         continue;
 
                     var fields = line.Split(',');
-
+                    int id = int.Parse(fields[0]);
                     string title = fields[1];
                     string author = fields[2];
                     int yearPublished = int.Parse(fields[3], CultureInfo.InvariantCulture);
@@ -32,7 +32,7 @@ public class CSVImporter : IImporter<Book>
                     string finishedString = fields[6];
                     bool finished = finishedString is "yes" or "y" or "true";
 
-                    var book = new Book(title, author, yearPublished, pages, genre, rating, finished);
+                    var book = new Book(id, title, author, yearPublished, pages, genre, rating, finished);
                     books.Add(book);
                 }
 

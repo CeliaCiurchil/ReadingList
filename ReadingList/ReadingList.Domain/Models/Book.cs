@@ -8,8 +8,6 @@ namespace ReadingList.Domain.Models
 {
     public class Book
     {
-        static int _nextId;
-
         private double _rating;
         private int _yearPublished;
 
@@ -44,8 +42,9 @@ namespace ReadingList.Domain.Models
             }
         }
 
-        public Book(string title, string author, int yearPublished, uint pages, string genre, double rating, bool finished = false)
+        public Book(int id, string title, string author, int yearPublished, uint pages, string genre, double rating, bool finished = false)
         {
+            Id = id;
             Title = title;
             Author = author;
             YearPublished = yearPublished;
@@ -53,12 +52,6 @@ namespace ReadingList.Domain.Models
             Genre = genre;
             Finished = finished;
             Rating = rating;
-            Id = _nextId++;
-        }
-
-        static Book()
-        {
-            _nextId = 1;
         }
     } 
 }

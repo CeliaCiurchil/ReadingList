@@ -31,7 +31,6 @@ public class BookService
             var addResult = Repository.Add(book);
             if (!addResult.IsSuccess)
             {
-                // keep your existing behavior—just don’t throw
                 Console.WriteLine($"Failed to add book: {addResult.Error}");
                 continue;
             }
