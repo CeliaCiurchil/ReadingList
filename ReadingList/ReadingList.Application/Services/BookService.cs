@@ -38,6 +38,22 @@ public class BookService
         }
         return Result<IEnumerable<Book>>.Success(imported);
     }
+    public async Task<Result> ExportAsync(IExportStrategy strategy, string path, IEnumerable<Book>? selection = null, CancellationToken ct = default)
+    {
+        IEnumerable<Book> items;
+        if (selection is not null)
+        {
+            items = selection;
+        }
+        else
+        {
+            var all = Repository.GetAll();
+            if (!all.IsSuccess) return Result.Failure(all.Error!);
+            items = all.Value!;
+        }
+
+        return await strategy.ExportAsync(items, path, ct).ConfigureAwait(false);
+    }
 
     public Result<IEnumerable<Book>> GetAllBooks() => Repository.GetAll();
 
@@ -45,14 +61,14 @@ public class BookService
     {
         var all = Repository.GetAll();
         if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
-        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Finished));
+        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Finished).ToList()); ;
     }
 
     public Result<IEnumerable<Book>> TopN(int n)
     {
         var all = Repository.GetAll();
         if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
-        return Result<IEnumerable<Book>>.Success(all.Value!.OrderByDescending(b => b.Rating).Take(n));
+        return Result<IEnumerable<Book>>.Success(all.Value!.OrderByDescending(b => b.Rating).Take(n).ToList());
     }
 
     public Result<IEnumerable<Book>> BooksByAuthor(string text)
@@ -66,7 +82,7 @@ public class BookService
         return Result<IEnumerable<Book>>.Success(
             all.Value!.Where(b =>
                 !string.IsNullOrEmpty(b.Author) &&
-                b.Author.IndexOf(text, StringComparison.OrdinalIgnoreCase) >= 0)
+                b.Author.IndexOf(text, StringComparison.OrdinalIgnoreCase) >= 0).ToList()
         );
     }
 
@@ -109,7 +125,8 @@ public class BookService
             .GroupBy(b => b.Author)
             .OrderByDescending(g => g.Count())
             .Take(3)
-            .Select(g => g.Key);
+            .Select(g => g.Key)
+            .ToList();
 
         return Result<IEnumerable<string>>.Success(top);
     }
