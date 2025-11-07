@@ -1,0 +1,1002 @@
+[
+  {
+    "Id": 1,
+    "Title": "The Silent Fire",
+    "Author": "Noah Martinez",
+    "YearPublished": 1662,
+    "Pages": 344,
+    "Genre": "History",
+    "Finished": true,
+    "Rating": 3.9
+  },
+  {
+    "Id": 2,
+    "Title": "The Golden Storm",
+    "Author": "Maria Ivanov",
+    "YearPublished": 1856,
+    "Pages": 1181,
+    "Genre": "Thriller",
+    "Finished": false,
+    "Rating": 4.5
+  },
+  {
+    "Id": 3,
+    "Title": "The Forgotten Forest",
+    "Author": "Chloe Kumar",
+    "YearPublished": 1583,
+    "Pages": 475,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 1.2
+  },
+  {
+    "Id": 4,
+    "Title": "The Lost Dreams",
+    "Author": "Chloe Tanaka",
+    "YearPublished": 1923,
+    "Pages": 1349,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 3.7
+  },
+  {
+    "Id": 5,
+    "Title": "The Lost Fire",
+    "Author": "Chloe Nguyen",
+    "YearPublished": 1916,
+    "Pages": 1090,
+    "Genre": "Thriller",
+    "Finished": false,
+    "Rating": 3.1
+  },
+  {
+    "Id": 6,
+    "Title": "The Lost Forest",
+    "Author": "Amara Nguyen",
+    "YearPublished": 1571,
+    "Pages": 192,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 0.6
+  },
+  {
+    "Id": 7,
+    "Title": "The Fading Dreams",
+    "Author": "Sophie Kumar",
+    "YearPublished": 1996,
+    "Pages": 396,
+    "Genre": "History",
+    "Finished": false,
+    "Rating": 2.4
+  },
+  {
+    "Id": 8,
+    "Title": "The Burning Journey",
+    "Author": "Chloe Dubois",
+    "YearPublished": 1535,
+    "Pages": 1144,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 3.4
+  },
+  {
+    "Id": 9,
+    "Title": "The Forgotten Storm",
+    "Author": "Chloe Smith",
+    "YearPublished": 2014,
+    "Pages": 209,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 1.3
+  },
+  {
+    "Id": 10,
+    "Title": "The Fading Fire",
+    "Author": "Noah Tanaka",
+    "YearPublished": 1765,
+    "Pages": 1424,
+    "Genre": "Biography",
+    "Finished": true,
+    "Rating": 4.7
+  },
+  {
+    "Id": 11,
+    "Title": "The Shattered World",
+    "Author": "Aisha Smith",
+    "YearPublished": 1605,
+    "Pages": 238,
+    "Genre": "Software",
+    "Finished": false,
+    "Rating": 1
+  },
+  {
+    "Id": 12,
+    "Title": "The Burning Journey",
+    "Author": "Noah Ivanov",
+    "YearPublished": 2023,
+    "Pages": 369,
+    "Genre": "Non-fiction",
+    "Finished": false,
+    "Rating": 1.8
+  },
+  {
+    "Id": 13,
+    "Title": "The Hidden Echoes",
+    "Author": "Chloe Dubois",
+    "YearPublished": 1795,
+    "Pages": 352,
+    "Genre": "History",
+    "Finished": false,
+    "Rating": 3.9
+  },
+  {
+    "Id": 14,
+    "Title": "The Lost Journey",
+    "Author": "Hiroshi Martinez",
+    "YearPublished": 1568,
+    "Pages": 189,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 3.2
+  },
+  {
+    "Id": 15,
+    "Title": "The Hidden Dreams",
+    "Author": "James Tanaka",
+    "YearPublished": 1726,
+    "Pages": 185,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 0.3
+  },
+  {
+    "Id": 16,
+    "Title": "The Endless World",
+    "Author": "Chloe Kumar",
+    "YearPublished": 1858,
+    "Pages": 1288,
+    "Genre": "Non-fiction",
+    "Finished": false,
+    "Rating": 3
+  },
+  {
+    "Id": 17,
+    "Title": "The Hidden Storm",
+    "Author": "Noah Petrov",
+    "YearPublished": 1943,
+    "Pages": 1191,
+    "Genre": "Poetry",
+    "Finished": false,
+    "Rating": 4.5
+  },
+  {
+    "Id": 18,
+    "Title": "The Golden Forest",
+    "Author": "James Tanaka",
+    "YearPublished": 1574,
+    "Pages": 193,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 1.3
+  },
+  {
+    "Id": 19,
+    "Title": "The Endless Storm",
+    "Author": "Maria Dubois",
+    "YearPublished": 1938,
+    "Pages": 1403,
+    "Genre": "Mystery",
+    "Finished": true,
+    "Rating": 0.4
+  },
+  {
+    "Id": 20,
+    "Title": "The Hidden World",
+    "Author": "Raj Dubois",
+    "YearPublished": 2000,
+    "Pages": 896,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 2.7
+  },
+  {
+    "Id": 21,
+    "Title": "The Hidden Echoes",
+    "Author": "Maria Fernandez",
+    "YearPublished": 1667,
+    "Pages": 1023,
+    "Genre": "Non-fiction",
+    "Finished": false,
+    "Rating": 2.2
+  },
+  {
+    "Id": 22,
+    "Title": "The Fading Legacy",
+    "Author": "Hiroshi Dubois",
+    "YearPublished": 1737,
+    "Pages": 730,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 1.2
+  },
+  {
+    "Id": 23,
+    "Title": "The Fading Storm",
+    "Author": "Sophie Dubois",
+    "YearPublished": 1621,
+    "Pages": 1160,
+    "Genre": "Mystery",
+    "Finished": false,
+    "Rating": 0.4
+  },
+  {
+    "Id": 24,
+    "Title": "The Hidden Dreams",
+    "Author": "Elena Johnson",
+    "YearPublished": 1788,
+    "Pages": 937,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 4.8
+  },
+  {
+    "Id": 25,
+    "Title": "The Forgotten Empire",
+    "Author": "Elena Nguyen",
+    "YearPublished": 1900,
+    "Pages": 491,
+    "Genre": "Fantasy",
+    "Finished": true,
+    "Rating": 0.8
+  },
+  {
+    "Id": 26,
+    "Title": "The Golden Code",
+    "Author": "Carlos Johnson",
+    "YearPublished": 1968,
+    "Pages": 283,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 1.8
+  },
+  {
+    "Id": 27,
+    "Title": "The Burning Fire",
+    "Author": "Hiroshi Fernandez",
+    "YearPublished": 1539,
+    "Pages": 194,
+    "Genre": "Mystery",
+    "Finished": false,
+    "Rating": 2.4
+  },
+  {
+    "Id": 28,
+    "Title": "The Silent Empire",
+    "Author": "Elena Ivanov",
+    "YearPublished": 1565,
+    "Pages": 1331,
+    "Genre": "Romance",
+    "Finished": false,
+    "Rating": 1
+  },
+  {
+    "Id": 29,
+    "Title": "The Burning Fire",
+    "Author": "Liam Fernandez",
+    "YearPublished": 1642,
+    "Pages": 124,
+    "Genre": "Romance",
+    "Finished": false,
+    "Rating": 4.4
+  },
+  {
+    "Id": 30,
+    "Title": "The Crimson Storm",
+    "Author": "Aisha Martinez",
+    "YearPublished": 1820,
+    "Pages": 994,
+    "Genre": "Fantasy",
+    "Finished": true,
+    "Rating": 0.4
+  },
+  {
+    "Id": 31,
+    "Title": "The Endless Storm",
+    "Author": "Noah Kumar",
+    "YearPublished": 1840,
+    "Pages": 376,
+    "Genre": "Romance",
+    "Finished": false,
+    "Rating": 2.3
+  },
+  {
+    "Id": 32,
+    "Title": "The Burning Fire",
+    "Author": "Carlos Tanaka",
+    "YearPublished": 1878,
+    "Pages": 380,
+    "Genre": "Romance",
+    "Finished": false,
+    "Rating": 2.1
+  },
+  {
+    "Id": 33,
+    "Title": "The Fading Fire",
+    "Author": "Chloe Kumar",
+    "YearPublished": 1993,
+    "Pages": 622,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 2.6
+  },
+  {
+    "Id": 34,
+    "Title": "The Lost Storm",
+    "Author": "Elena Ivanov",
+    "YearPublished": 1536,
+    "Pages": 1419,
+    "Genre": "Biography",
+    "Finished": true,
+    "Rating": 1.5
+  },
+  {
+    "Id": 35,
+    "Title": "The Shattered Code",
+    "Author": "Amara Tanaka",
+    "YearPublished": 1578,
+    "Pages": 573,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 4.3
+  },
+  {
+    "Id": 36,
+    "Title": "The Crimson Forest",
+    "Author": "Sophie Fernandez",
+    "YearPublished": 1869,
+    "Pages": 887,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 2.3
+  },
+  {
+    "Id": 37,
+    "Title": "The Golden Legacy",
+    "Author": "Elena Nguyen",
+    "YearPublished": 1664,
+    "Pages": 115,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 0.1
+  },
+  {
+    "Id": 38,
+    "Title": "The Forgotten Forest",
+    "Author": "Elena Tanaka",
+    "YearPublished": 1680,
+    "Pages": 431,
+    "Genre": "Mystery",
+    "Finished": true,
+    "Rating": 1.1
+  },
+  {
+    "Id": 39,
+    "Title": "The Lost Code",
+    "Author": "Carlos Petrov",
+    "YearPublished": 1621,
+    "Pages": 266,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 0.4
+  },
+  {
+    "Id": 40,
+    "Title": "The Golden Echoes",
+    "Author": "Elena Kumar",
+    "YearPublished": 1529,
+    "Pages": 1176,
+    "Genre": "Software",
+    "Finished": false,
+    "Rating": 2.9
+  },
+  {
+    "Id": 41,
+    "Title": "The Crimson Code",
+    "Author": "Maria Johnson",
+    "YearPublished": 1937,
+    "Pages": 991,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 3.1
+  },
+  {
+    "Id": 42,
+    "Title": "The Lost Code",
+    "Author": "Chloe Fernandez",
+    "YearPublished": 1976,
+    "Pages": 1116,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 3
+  },
+  {
+    "Id": 43,
+    "Title": "The Golden Dreams",
+    "Author": "James Fernandez",
+    "YearPublished": 1930,
+    "Pages": 345,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 3.2
+  },
+  {
+    "Id": 44,
+    "Title": "The Shattered Legacy",
+    "Author": "Maria Kumar",
+    "YearPublished": 1801,
+    "Pages": 454,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 2.7
+  },
+  {
+    "Id": 45,
+    "Title": "The Fading Echoes",
+    "Author": "Maria Ivanov",
+    "YearPublished": 1858,
+    "Pages": 921,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 2.7
+  },
+  {
+    "Id": 46,
+    "Title": "The Crimson World",
+    "Author": "Liam Tanaka",
+    "YearPublished": 1547,
+    "Pages": 1148,
+    "Genre": "Fantasy",
+    "Finished": true,
+    "Rating": 4.5
+  },
+  {
+    "Id": 47,
+    "Title": "The Shattered Fire",
+    "Author": "Aisha Smith",
+    "YearPublished": 1516,
+    "Pages": 861,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 4.2
+  },
+  {
+    "Id": 48,
+    "Title": "The Burning Storm",
+    "Author": "Sophie Smith",
+    "YearPublished": 1932,
+    "Pages": 1142,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 3.2
+  },
+  {
+    "Id": 49,
+    "Title": "The Shattered Storm",
+    "Author": "Maria Tanaka",
+    "YearPublished": 1867,
+    "Pages": 557,
+    "Genre": "Poetry",
+    "Finished": true,
+    "Rating": 4.8
+  },
+  {
+    "Id": 50,
+    "Title": "The Lost Forest",
+    "Author": "Raj Johnson",
+    "YearPublished": 1549,
+    "Pages": 1272,
+    "Genre": "Thriller",
+    "Finished": true,
+    "Rating": 4.5
+  },
+  {
+    "Id": 51,
+    "Title": "The Shattered Journey",
+    "Author": "James Petrov",
+    "YearPublished": 1955,
+    "Pages": 519,
+    "Genre": "Thriller",
+    "Finished": false,
+    "Rating": 3
+  },
+  {
+    "Id": 52,
+    "Title": "The Forgotten Journey",
+    "Author": "James Fernandez",
+    "YearPublished": 1619,
+    "Pages": 1452,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 4.6
+  },
+  {
+    "Id": 53,
+    "Title": "The Burning Dreams",
+    "Author": "Aisha Tanaka",
+    "YearPublished": 2010,
+    "Pages": 882,
+    "Genre": "Mystery",
+    "Finished": true,
+    "Rating": 1
+  },
+  {
+    "Id": 54,
+    "Title": "The Hidden Legacy",
+    "Author": "Hiroshi Fernandez",
+    "YearPublished": 1647,
+    "Pages": 1121,
+    "Genre": "History",
+    "Finished": true,
+    "Rating": 1.6
+  },
+  {
+    "Id": 55,
+    "Title": "The Silent Forest",
+    "Author": "Raj Ivanov",
+    "YearPublished": 1705,
+    "Pages": 1387,
+    "Genre": "Biography",
+    "Finished": true,
+    "Rating": 1.5
+  },
+  {
+    "Id": 56,
+    "Title": "The Lost World",
+    "Author": "Elena Smith",
+    "YearPublished": 1983,
+    "Pages": 418,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 1.8
+  },
+  {
+    "Id": 57,
+    "Title": "The Hidden Empire",
+    "Author": "James Johnson",
+    "YearPublished": 1775,
+    "Pages": 1398,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 1.2
+  },
+  {
+    "Id": 58,
+    "Title": "The Hidden Code",
+    "Author": "James Tanaka",
+    "YearPublished": 1740,
+    "Pages": 952,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 1.8
+  },
+  {
+    "Id": 59,
+    "Title": "The Golden Forest",
+    "Author": "Liam Ivanov",
+    "YearPublished": 1727,
+    "Pages": 1495,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 1.6
+  },
+  {
+    "Id": 60,
+    "Title": "The Endless World",
+    "Author": "Elena Ivanov",
+    "YearPublished": 1683,
+    "Pages": 430,
+    "Genre": "Biography",
+    "Finished": true,
+    "Rating": 1.7
+  },
+  {
+    "Id": 61,
+    "Title": "The Burning Dreams",
+    "Author": "Carlos Petrov",
+    "YearPublished": 1960,
+    "Pages": 1493,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 1.9
+  },
+  {
+    "Id": 62,
+    "Title": "The Hidden Empire",
+    "Author": "Amara Tanaka",
+    "YearPublished": 1530,
+    "Pages": 76,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 1
+  },
+  {
+    "Id": 63,
+    "Title": "The Hidden Forest",
+    "Author": "Raj Ivanov",
+    "YearPublished": 1859,
+    "Pages": 1334,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 1.1
+  },
+  {
+    "Id": 64,
+    "Title": "The Golden Code",
+    "Author": "Noah Smith",
+    "YearPublished": 1875,
+    "Pages": 707,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 0.3
+  },
+  {
+    "Id": 65,
+    "Title": "The Crimson Echoes",
+    "Author": "Amara Nguyen",
+    "YearPublished": 1748,
+    "Pages": 576,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 4.9
+  },
+  {
+    "Id": 66,
+    "Title": "The Burning Forest",
+    "Author": "Liam Fernandez",
+    "YearPublished": 1749,
+    "Pages": 779,
+    "Genre": "Mystery",
+    "Finished": false,
+    "Rating": 4.3
+  },
+  {
+    "Id": 67,
+    "Title": "The Endless Code",
+    "Author": "Hiroshi Martinez",
+    "YearPublished": 1812,
+    "Pages": 1388,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 3.4
+  },
+  {
+    "Id": 68,
+    "Title": "The Shattered Fire",
+    "Author": "Sophie Fernandez",
+    "YearPublished": 1789,
+    "Pages": 226,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 2.7
+  },
+  {
+    "Id": 69,
+    "Title": "The Lost Journey",
+    "Author": "Hiroshi Tanaka",
+    "YearPublished": 1644,
+    "Pages": 544,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 0.9
+  },
+  {
+    "Id": 70,
+    "Title": "The Endless Echoes",
+    "Author": "Liam Fernandez",
+    "YearPublished": 1645,
+    "Pages": 1328,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 1
+  },
+  {
+    "Id": 71,
+    "Title": "The Lost Empire",
+    "Author": "Liam Dubois",
+    "YearPublished": 1873,
+    "Pages": 1127,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 1.8
+  },
+  {
+    "Id": 72,
+    "Title": "The Shattered Dreams",
+    "Author": "Hiroshi Johnson",
+    "YearPublished": 1986,
+    "Pages": 66,
+    "Genre": "History",
+    "Finished": false,
+    "Rating": 2.4
+  },
+  {
+    "Id": 73,
+    "Title": "The Crimson Echoes",
+    "Author": "Aisha Petrov",
+    "YearPublished": 1548,
+    "Pages": 754,
+    "Genre": "Thriller",
+    "Finished": false,
+    "Rating": 2.4
+  },
+  {
+    "Id": 74,
+    "Title": "The Golden Storm",
+    "Author": "Raj Johnson",
+    "YearPublished": 1757,
+    "Pages": 713,
+    "Genre": "Thriller",
+    "Finished": false,
+    "Rating": 2.3
+  },
+  {
+    "Id": 75,
+    "Title": "The Lost World",
+    "Author": "Elena Nguyen",
+    "YearPublished": 1788,
+    "Pages": 158,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 1.6
+  },
+  {
+    "Id": 76,
+    "Title": "The Shattered Storm",
+    "Author": "Raj Kumar",
+    "YearPublished": 1583,
+    "Pages": 832,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 4.5
+  },
+  {
+    "Id": 77,
+    "Title": "The Silent Forest",
+    "Author": "Sophie Ivanov",
+    "YearPublished": 1720,
+    "Pages": 1307,
+    "Genre": "Biography",
+    "Finished": true,
+    "Rating": 4.4
+  },
+  {
+    "Id": 78,
+    "Title": "The Crimson Journey",
+    "Author": "Liam Johnson",
+    "YearPublished": 1530,
+    "Pages": 1209,
+    "Genre": "Science Fiction",
+    "Finished": true,
+    "Rating": 2
+  },
+  {
+    "Id": 79,
+    "Title": "The Fading Journey",
+    "Author": "Noah Johnson",
+    "YearPublished": 1630,
+    "Pages": 1117,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 3
+  },
+  {
+    "Id": 80,
+    "Title": "The Burning Code",
+    "Author": "Aisha Kumar",
+    "YearPublished": 1513,
+    "Pages": 1094,
+    "Genre": "Fantasy",
+    "Finished": false,
+    "Rating": 2.7
+  },
+  {
+    "Id": 81,
+    "Title": "The Lost World",
+    "Author": "Aisha Johnson",
+    "YearPublished": 1729,
+    "Pages": 218,
+    "Genre": "Non-fiction",
+    "Finished": false,
+    "Rating": 3.4
+  },
+  {
+    "Id": 82,
+    "Title": "The Fading Empire",
+    "Author": "Liam Ivanov",
+    "YearPublished": 1883,
+    "Pages": 1047,
+    "Genre": "History",
+    "Finished": true,
+    "Rating": 2.2
+  },
+  {
+    "Id": 83,
+    "Title": "The Lost Code",
+    "Author": "Raj Tanaka",
+    "YearPublished": 1791,
+    "Pages": 742,
+    "Genre": "Fantasy",
+    "Finished": true,
+    "Rating": 2
+  },
+  {
+    "Id": 84,
+    "Title": "The Crimson Echoes",
+    "Author": "Raj Ivanov",
+    "YearPublished": 1815,
+    "Pages": 1281,
+    "Genre": "Thriller",
+    "Finished": true,
+    "Rating": 0.6
+  },
+  {
+    "Id": 85,
+    "Title": "The Burning Forest",
+    "Author": "Sophie Smith",
+    "YearPublished": 2013,
+    "Pages": 1449,
+    "Genre": "Non-fiction",
+    "Finished": true,
+    "Rating": 0.7
+  },
+  {
+    "Id": 86,
+    "Title": "The Shattered Journey",
+    "Author": "Amara Smith",
+    "YearPublished": 1566,
+    "Pages": 579,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 1.9
+  },
+  {
+    "Id": 87,
+    "Title": "The Fading Fire",
+    "Author": "Hiroshi Petrov",
+    "YearPublished": 1951,
+    "Pages": 686,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 1.7
+  },
+  {
+    "Id": 88,
+    "Title": "The Hidden World",
+    "Author": "Hiroshi Kumar",
+    "YearPublished": 1550,
+    "Pages": 426,
+    "Genre": "Romance",
+    "Finished": false,
+    "Rating": 2.4
+  },
+  {
+    "Id": 89,
+    "Title": "The Golden World",
+    "Author": "Raj Tanaka",
+    "YearPublished": 1764,
+    "Pages": 1440,
+    "Genre": "History",
+    "Finished": true,
+    "Rating": 2.9
+  },
+  {
+    "Id": 90,
+    "Title": "The Fading Echoes",
+    "Author": "James Petrov",
+    "YearPublished": 2019,
+    "Pages": 166,
+    "Genre": "Non-fiction",
+    "Finished": false,
+    "Rating": 4.3
+  },
+  {
+    "Id": 91,
+    "Title": "The Fading Journey",
+    "Author": "Liam Tanaka",
+    "YearPublished": 1839,
+    "Pages": 1222,
+    "Genre": "History",
+    "Finished": true,
+    "Rating": 2.4
+  },
+  {
+    "Id": 92,
+    "Title": "The Forgotten Echoes",
+    "Author": "Maria Dubois",
+    "YearPublished": 1766,
+    "Pages": 475,
+    "Genre": "Software",
+    "Finished": true,
+    "Rating": 1.5
+  },
+  {
+    "Id": 93,
+    "Title": "The Hidden Forest",
+    "Author": "Noah Martinez",
+    "YearPublished": 1853,
+    "Pages": 1046,
+    "Genre": "Romance",
+    "Finished": true,
+    "Rating": 4
+  },
+  {
+    "Id": 94,
+    "Title": "The Hidden World",
+    "Author": "Raj Fernandez",
+    "YearPublished": 1537,
+    "Pages": 610,
+    "Genre": "Science Fiction",
+    "Finished": false,
+    "Rating": 0.1
+  },
+  {
+    "Id": 95,
+    "Title": "The Crimson Forest",
+    "Author": "Maria Ivanov",
+    "YearPublished": 1975,
+    "Pages": 857,
+    "Genre": "Mystery",
+    "Finished": true,
+    "Rating": 3.7
+  },
+  {
+    "Id": 96,
+    "Title": "The Lost Legacy",
+    "Author": "Maria Kumar",
+    "YearPublished": 1910,
+    "Pages": 1285,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 1.4
+  },
+  {
+    "Id": 97,
+    "Title": "The Silent Empire",
+    "Author": "Maria Smith",
+    "YearPublished": 1603,
+    "Pages": 1439,
+    "Genre": "Poetry",
+    "Finished": false,
+    "Rating": 3.9
+  },
+  {
+    "Id": 98,
+    "Title": "The Silent Journey",
+    "Author": "Liam Johnson",
+    "YearPublished": 1737,
+    "Pages": 859,
+    "Genre": "Mystery",
+    "Finished": false,
+    "Rating": 0.4
+  },
+  {
+    "Id": 99,
+    "Title": "The Burning Forest",
+    "Author": "Noah Tanaka",
+    "YearPublished": 1704,
+    "Pages": 104,
+    "Genre": "Biography",
+    "Finished": false,
+    "Rating": 3.1
+  },
+  {
+    "Id": 100,
+    "Title": "The Silent Journey",
+    "Author": "Sophie Petrov",
+    "YearPublished": 1869,
+    "Pages": 1486,
+    "Genre": "Mystery",
+    "Finished": true,
+    "Rating": 1.8
+  }
+]

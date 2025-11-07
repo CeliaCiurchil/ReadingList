@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ReadingList.Infrastructure\ReadingList.Infrastructure.csproj" />
   </ItemGroup>
 
