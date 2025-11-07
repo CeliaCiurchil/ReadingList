@@ -21,6 +21,7 @@ public static class BookMenu
             Console.WriteLine($"Error: {res.Error}");
             return;
         }
+
         res.Value!.ToList().ForEach(DisplayBook);
     }
 
@@ -28,22 +29,28 @@ public static class BookMenu
     {
         Console.Write("N: ");
         if (!int.TryParse(Console.ReadLine(), out int n) || n <= 0)
-        { Console.WriteLine("Invalid number."); return; }
+        { 
+            Console.WriteLine("Invalid number.");
+            return; 
+        }
 
         var res = bookService.TopN(n);
         if (!res.IsSuccess) { Console.WriteLine($"Error: {res.Error}"); return; }
+
         res.Value!.ToList().ForEach(DisplayBook);
     }
 
     public static void ViewFinishedBooks(BookService bookService)
     {
         Console.WriteLine("Finished Books:");
+
         var res = bookService.GetFinishedBooks();
         if (!res.IsSuccess)
         {
             Console.WriteLine($"Error: {res.Error}");
             return;
         }
+
         res.Value!.ToList().ForEach(DisplayBook);
     }
 
@@ -73,6 +80,7 @@ public static class BookMenu
             Console.WriteLine($"Error: {res.Error}");
             return;
         }
+
         res.Value!.ToList().ForEach(DisplayBook);
     }
 

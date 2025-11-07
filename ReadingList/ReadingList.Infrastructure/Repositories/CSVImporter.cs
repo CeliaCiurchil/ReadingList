@@ -16,7 +16,7 @@ public class CSVImporter : IImporter<Book>
                 var books = new List<Book>();
                 var lines = await File.ReadAllLinesAsync(filePath).ConfigureAwait(false);
 
-                foreach (var line in lines.Skip(1)) // skip header
+                foreach (var line in lines.Skip(1)) 
                 {
                     if (string.IsNullOrWhiteSpace(line))
                         continue;

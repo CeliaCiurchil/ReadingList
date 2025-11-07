@@ -38,6 +38,7 @@ public class BookService
         }
         return Result<IEnumerable<Book>>.Success(imported);
     }
+
     public async Task<Result> ExportAsync(IExportStrategy strategy, string path, IEnumerable<Book>? selection = null, CancellationToken ct = default)
     {
         IEnumerable<Book> items;
@@ -160,7 +161,6 @@ public class BookService
         var up = Repository.Update(book);
         return up.IsSuccess ? Result.Success() : Result.Failure(up.Error!);
     }
-
 
     public int GetTotalBookCount()
     {
