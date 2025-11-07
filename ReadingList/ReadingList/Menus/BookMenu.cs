@@ -1,76 +1,38 @@
 ﻿using ReadingList.Application.Services;
+using ReadingList.Domain;
 using ReadingList.Domain.Models;
 using ReadingList.Infrastructure.Repositories;
 namespace ReadingList.Cli.Menus;
 
-internal class BookMenu
+public static class BookMenu
 {
-    public static void PrintOptions()
+    public static void BooksByAuthor(BookService bookService)
     {
-        Console.WriteLine("""
-                1. Import books from CSV
-                2. View all books
-                3. View finished books
-                8. Exit
-            """);
-        Console.Write("Enter an option: ");
-    }
+        Console.Write("Enter author name: ");
+        Console.WriteLine("Author: ");
+        string author = Console.ReadLine() ?? "";
 
-    public static void MenuLoop()
-    {
-        var repository = new InMemoryRepository<Book, int>(b => b.Id);
-        var importer = new CSVImporter();
-        var bookService = new BookService(importer, repository); // DI
-
-        int option = 0;
-        while (option != 8)
+        var res = bookService.BooksByAuthor(author);
+        if (!res.IsSuccess)
         {
-            try
-            {
-                PrintOptions();
-
-                if (!int.TryParse(Console.ReadLine(), out option))
-                {
-                    Console.WriteLine("Invalid input. Please enter a number.");
-                    continue;
-                }
-
-                if (option == 8)
-                {
-                    Console.WriteLine("You chose exiting the program!");
-                    break;
-                }
-
-                switch (option)
-                {
-                    case 1:
-                        ImportBooks(bookService);
-                        break;
-                    case 2:
-                        ViewAllBooks(bookService);
-                        break;
-                    case 3:
-                        ViewFinishedBooks(bookService);
-                        break;
-                    default:
-                        Console.WriteLine("Invalid option");
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Press to continue");
-                Console.ReadLine();
-                Console.Clear();
-            }
+            Console.WriteLine($"Error: {res.Error}");
+            return;
         }
+        res.Value!.ToList().ForEach(DisplayBook);
     }
 
-    private static void ViewFinishedBooks(BookService bookService)
+    public static void TopRatedN(BookService bookService)
+    {
+        Console.Write("N: ");
+        if (!int.TryParse(Console.ReadLine(), out int n) || n <= 0)
+        { Console.WriteLine("Invalid number."); return; }
+
+        var res = bookService.TopN(n);
+        if (!res.IsSuccess) { Console.WriteLine($"Error: {res.Error}"); return; }
+        res.Value!.ToList().ForEach(DisplayBook);
+    }
+
+    public static void ViewFinishedBooks(BookService bookService)
     {
         Console.WriteLine("Finished Books:");
         var res = bookService.GetFinishedBooks();
@@ -82,7 +44,7 @@ internal class BookMenu
         res.Value!.ToList().ForEach(DisplayBook);
     }
 
-    private static void ImportBooks(BookService bookService)
+    public static void ImportBooks(BookService bookService)
     {
         Console.Write("Enter the CSV file paths separated by a space: ");
         string input = Console.ReadLine() ?? "";
@@ -100,7 +62,7 @@ internal class BookMenu
         Console.WriteLine($"Imported {importRes.Value!.Count()} books.");
     }
 
-    private static void ViewAllBooks(BookService bookService)
+    public static void ViewAllBooks(BookService bookService)
     {
         var res = bookService.GetAllBooks();
         if (!res.IsSuccess)
@@ -109,6 +71,62 @@ internal class BookMenu
             return;
         }
         res.Value!.ToList().ForEach(DisplayBook);
+    }
+
+    public static void Statistics(BookService bookService)
+    {
+        var allRes = bookService.GetAllBooks();
+        if (!allRes.IsSuccess) { Console.WriteLine($"Error: {allRes.Error}"); return; }
+        var books = allRes.Value!.ToList();
+
+        int total = books.Count;
+        var finishedCountRes = bookService.FinishedBooksCount();
+        var averageRatingRes = bookService.AverageRating();
+
+        Console.WriteLine("== Stats ==");
+        Console.WriteLine($"Total books: {total}");
+        Console.WriteLine($"Finished books: {(finishedCountRes.IsSuccess ? finishedCountRes.Value : 0)}");
+        Console.WriteLine($"Average rating: {(averageRatingRes.IsSuccess ? averageRatingRes.Value : 0.0):F2}");
+
+        Console.WriteLine("Pages by genre:");
+        var pagesByGenre = books
+            .GroupBy(b => b.Genre ?? string.Empty)
+            .OrderBy(g => g.Key)
+            .Select(g => new { Genre = g.Key, Pages = g.Sum(b => (int)b.Pages) });
+
+        foreach (var g in pagesByGenre)
+            Console.WriteLine($"  {g.Genre}: {g.Pages}");
+
+        Console.WriteLine("Top 3 authors by book count:");
+        var topAuthorsRes = bookService.Top3AuthorsByBookCount();
+        if (!topAuthorsRes.IsSuccess || !topAuthorsRes.Value!.Any())
+            Console.WriteLine("  (none)");
+        else
+            topAuthorsRes.Value!.ToList().ForEach(a => Console.WriteLine($"  {a}"));
+    }
+
+    public static void MarkFinished(BookService bookService)
+    {
+        Console.Write("Book ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int id))
+        { Console.WriteLine("Invalid ID."); return; }
+
+        var res = bookService.MarkFinished(id);
+        Console.WriteLine(res.IsSuccess ? "200 OK" : $"404 Not Found / Error: {res.Error}");
+    }
+
+    public static void RateBook(BookService bookService)
+    {
+        Console.Write("Book ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int id))
+        { Console.WriteLine("Invalid ID."); return; }
+
+        Console.Write("Rating (0-5): ");
+        if (!double.TryParse(Console.ReadLine(), out double rating))
+        { Console.WriteLine("Invalid rating."); return; }
+
+        var res = bookService.Rate(id, rating);
+        Console.WriteLine(res.IsSuccess ? "200 OK" : $"Error: {res.Error}");
     }
 
     private static void DisplayBook(Book book)
