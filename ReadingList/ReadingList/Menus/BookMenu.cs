@@ -1,7 +1,10 @@
 ﻿using ReadingList.Application.Services;
 using ReadingList.Domain;
 using ReadingList.Domain.Models;
+using ReadingList.Domain.Enums;
 using ReadingList.Infrastructure.Repositories;
+using ReadingList.Application.Interfaces;
+using ReadingList.Infrastructure.Exporters;
 namespace ReadingList.Cli.Menus;
 
 public static class BookMenu
@@ -133,4 +136,46 @@ public static class BookMenu
     {
         Console.WriteLine($"ID: {book.Id}\n Title: {book.Title}\n Author: {book.Author}\n Year Published: {book.YearPublished}\n Pages: {book.Pages}\n Genre: {book.Genre}\n Finished: {book.Finished}\n Rating: {book.Rating}\n");
     }
+
+    internal static void ExportBooks(BookService bookService)
+    {
+        Console.Write("Enter the export file path: ");
+        var path = Console.ReadLine() ?? "";
+        if (string.IsNullOrWhiteSpace(path))
+        {
+            Console.WriteLine("Invalid path.");
+            return;
+        }
+
+        Console.Write("Enter the export type (json/csv): ");
+        var input = Console.ReadLine() ?? "";
+
+        if (!Enum.TryParse<ExportStrategy>(input, true, out var strategy))
+        {
+            Console.WriteLine("Invalid export strategy. Use 'json' or 'csv'.");
+            return; 
+        }
+
+        if (File.Exists(path))
+        {
+            Console.Write($"File '{path}' exists. Overwrite? (y/n): ");
+            var answer = (Console.ReadLine() ?? "").Trim().ToLowerInvariant();
+            if (answer is not ("y" or "yes"))
+            {
+                Console.WriteLine("Canceled.");
+                return;
+            }
+        }
+
+        IExportStrategy exportStrategy = strategy == ExportStrategy.Json
+            ? new JsonExportStrategy()
+            : new CsvExportStrategy();
+
+        var result = bookService.ExportAsync(exportStrategy, path).GetAwaiter().GetResult();
+
+        Console.WriteLine(result.IsSuccess
+            ? $"Exported successfully to {path}"
+            : $"Export failed: {result.Error}");
+    }
+
 }

@@ -22,7 +22,8 @@ internal class Menu
             6. Stats
             7. Mark finished <id>
             8. Rate <id> <0-5>
-            9. Exit
+            9. Export
+            10. Exit
         """);
         Console.Write("Enter an option: ");
     }
@@ -34,7 +35,7 @@ internal class Menu
         var bookService = new BookService(importer, repository); // DI
 
         int option = 0;
-        while (option != 9)
+        while (option != 10)
         {
             try
             {
@@ -46,7 +47,7 @@ internal class Menu
                     continue;
                 }
 
-                if (option == 9)
+                if (option == 10)
                 {
                     Console.WriteLine("You chose exiting the program!");
                     break;
@@ -62,6 +63,7 @@ internal class Menu
                     case 6: BookMenu.Statistics(bookService); break;
                     case 7: BookMenu.MarkFinished(bookService); break;
                     case 8: BookMenu.RateBook(bookService); break;
+                    case 9: BookMenu.ExportBooks(bookService); break;
                     default: Console.WriteLine("Invalid option"); break;
                 }
             }
