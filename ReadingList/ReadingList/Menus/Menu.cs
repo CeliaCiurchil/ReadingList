@@ -28,7 +28,7 @@ internal class Menu
         Console.Write("Enter an option: ");
     }
 
-    public static void MenuLoop()
+    public static async Task MenuLoop()
     {
         var repository = new InMemoryRepository<Book, int>(b => b.Id);
         var importer = new CSVImporter();
@@ -55,7 +55,7 @@ internal class Menu
 
                 switch (option)
                 {
-                    case 1: BookMenu.ImportBooks(bookService); break;
+                    case 1: await BookMenu.ImportBooksAsync(bookService); break;
                     case 2: BookMenu.ViewAllBooks(bookService); break;
                     case 3: BookMenu.ViewFinishedBooks(bookService); break;
                     case 4: BookMenu.TopRatedN(bookService); break;

@@ -54,7 +54,7 @@ public static class BookMenu
         res.Value!.ToList().ForEach(DisplayBook);
     }
 
-    public static void ImportBooks(BookService bookService)
+    public static async Task ImportBooksAsync(BookService bookService)
     {
         Console.Write("Enter the CSV file paths separated by a space: ");
         string input = Console.ReadLine() ?? "";
@@ -63,7 +63,7 @@ public static class BookMenu
         string dataFolder = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\Data"));
         string[] filePaths = fileNames.Select(name => Path.Combine(dataFolder, name)).ToArray();
 
-        var importRes = bookService.ImportBooksAsync(filePaths).GetAwaiter().GetResult();
+        var importRes = await bookService.ImportBooksAsync(filePaths);
         if (!importRes.IsSuccess)
         {
             Console.WriteLine($"Import failed: {importRes.Error}");

@@ -22,7 +22,7 @@ public class BookService
 
     public async Task<Result<IEnumerable<Book>>> ImportBooksAsync(params string[] filePaths)
     {
-        var importResult = await Importer.ImportFromFileAsync(filePaths).ConfigureAwait(false);
+        var importResult = await Importer.ImportFromFileAsync(filePaths);
         if (!importResult.IsSuccess)
             return Result<IEnumerable<Book>>.Failure(importResult.Error!);
 
