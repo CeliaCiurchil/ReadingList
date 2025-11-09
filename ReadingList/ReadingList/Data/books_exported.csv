@@ -1,0 +1,101 @@
+Id,Title,Author,Year,Pages,Genre,Finished,Rating
+1,The Silent Fire,Noah Martinez,1662,344,History,yes,3.9
+2,The Golden Storm,Maria Ivanov,1856,1181,Thriller,no,4.5
+3,The Forgotten Forest,Chloe Kumar,1583,475,Fantasy,no,1.2
+4,The Lost Dreams,Chloe Tanaka,1923,1349,Non-fiction,yes,3.7
+5,The Lost Fire,Chloe Nguyen,1916,1090,Thriller,no,3.1
+6,The Lost Forest,Amara Nguyen,1571,192,Romance,yes,0.6
+7,The Fading Dreams,Sophie Kumar,1996,396,History,no,2.4
+8,The Burning Journey,Chloe Dubois,1535,1144,Biography,no,3.4
+9,The Forgotten Storm,Chloe Smith,2014,209,Science Fiction,no,1.3
+10,The Fading Fire,Noah Tanaka,1765,1424,Biography,yes,4.7
+11,The Shattered World,Aisha Smith,1605,238,Software,no,1
+12,The Burning Journey,Noah Ivanov,2023,369,Non-fiction,no,1.8
+13,The Hidden Echoes,Chloe Dubois,1795,352,History,no,3.9
+14,The Lost Journey,Hiroshi Martinez,1568,189,Romance,yes,3.2
+15,The Hidden Dreams,James Tanaka,1726,185,Science Fiction,no,0.3
+16,The Endless World,Chloe Kumar,1858,1288,Non-fiction,no,3
+17,The Hidden Storm,Noah Petrov,1943,1191,Poetry,no,4.5
+18,The Golden Forest,James Tanaka,1574,193,Biography,no,1.3
+19,The Endless Storm,Maria Dubois,1938,1403,Mystery,yes,0.4
+20,The Hidden World,Raj Dubois,2000,896,Software,yes,2.7
+21,The Hidden Echoes,Maria Fernandez,1667,1023,Non-fiction,no,2.2
+22,The Fading Legacy,Hiroshi Dubois,1737,730,Science Fiction,yes,1.2
+23,The Fading Storm,Sophie Dubois,1621,1160,Mystery,no,0.4
+24,The Hidden Dreams,Elena Johnson,1788,937,Romance,yes,4.8
+25,The Forgotten Empire,Elena Nguyen,1900,491,Fantasy,yes,0.8
+26,The Golden Code,Carlos Johnson,1968,283,Non-fiction,yes,1.8
+27,The Burning Fire,Hiroshi Fernandez,1539,194,Mystery,no,2.4
+28,The Silent Empire,Elena Ivanov,1565,1331,Romance,no,1
+29,The Burning Fire,Liam Fernandez,1642,124,Romance,no,4.4
+30,The Crimson Storm,Aisha Martinez,1820,994,Fantasy,yes,0.4
+31,The Endless Storm,Noah Kumar,1840,376,Romance,no,2.3
+32,The Burning Fire,Carlos Tanaka,1878,380,Romance,no,2.1
+33,The Fading Fire,Chloe Kumar,1993,622,Romance,yes,2.6
+34,The Lost Storm,Elena Ivanov,1536,1419,Biography,yes,1.5
+35,The Shattered Code,Amara Tanaka,1578,573,Romance,yes,4.3
+36,The Crimson Forest,Sophie Fernandez,1869,887,Software,yes,2.3
+37,The Golden Legacy,Elena Nguyen,1664,115,Fantasy,no,0.1
+38,The Forgotten Forest,Elena Tanaka,1680,431,Mystery,yes,1.1
+39,The Lost Code,Carlos Petrov,1621,266,Fantasy,no,0.4
+40,The Golden Echoes,Elena Kumar,1529,1176,Software,no,2.9
+41,The Crimson Code,Maria Johnson,1937,991,Biography,no,3.1
+42,The Lost Code,Chloe Fernandez,1976,1116,Fantasy,no,3
+43,The Golden Dreams,James Fernandez,1930,345,Software,yes,3.2
+44,The Shattered Legacy,Maria Kumar,1801,454,Software,yes,2.7
+45,The Fading Echoes,Maria Ivanov,1858,921,Fantasy,no,2.7
+46,The Crimson World,Liam Tanaka,1547,1148,Fantasy,yes,4.5
+47,The Shattered Fire,Aisha Smith,1516,861,Biography,no,4.2
+48,The Burning Storm,Sophie Smith,1932,1142,Science Fiction,yes,3.2
+49,The Shattered Storm,Maria Tanaka,1867,557,Poetry,yes,4.8
+50,The Lost Forest,Raj Johnson,1549,1272,Thriller,yes,4.5
+51,The Shattered Journey,James Petrov,1955,519,Thriller,no,3
+52,The Forgotten Journey,James Fernandez,1619,1452,Science Fiction,yes,4.6
+53,The Burning Dreams,Aisha Tanaka,2010,882,Mystery,yes,1
+54,The Hidden Legacy,Hiroshi Fernandez,1647,1121,History,yes,1.6
+55,The Silent Forest,Raj Ivanov,1705,1387,Biography,yes,1.5
+56,The Lost World,Elena Smith,1983,418,Non-fiction,yes,1.8
+57,The Hidden Empire,James Johnson,1775,1398,Science Fiction,yes,1.2
+58,The Hidden Code,James Tanaka,1740,952,Software,yes,1.8
+59,The Golden Forest,Liam Ivanov,1727,1495,Science Fiction,no,1.6
+60,The Endless World,Elena Ivanov,1683,430,Biography,yes,1.7
+61,The Burning Dreams,Carlos Petrov,1960,1493,Biography,no,1.9
+62,The Hidden Empire,Amara Tanaka,1530,76,Non-fiction,yes,1
+63,The Hidden Forest,Raj Ivanov,1859,1334,Software,yes,1.1
+64,The Golden Code,Noah Smith,1875,707,Biography,no,0.3
+65,The Crimson Echoes,Amara Nguyen,1748,576,Science Fiction,no,4.9
+66,The Burning Forest,Liam Fernandez,1749,779,Mystery,no,4.3
+67,The Endless Code,Hiroshi Martinez,1812,1388,Software,yes,3.4
+68,The Shattered Fire,Sophie Fernandez,1789,226,Science Fiction,no,2.7
+69,The Lost Journey,Hiroshi Tanaka,1644,544,Biography,no,0.9
+70,The Endless Echoes,Liam Fernandez,1645,1328,Science Fiction,yes,1
+71,The Lost Empire,Liam Dubois,1873,1127,Biography,no,1.8
+72,The Shattered Dreams,Hiroshi Johnson,1986,66,History,no,2.4
+73,The Crimson Echoes,Aisha Petrov,1548,754,Thriller,no,2.4
+74,The Golden Storm,Raj Johnson,1757,713,Thriller,no,2.3
+75,The Lost World,Elena Nguyen,1788,158,Software,yes,1.6
+76,The Shattered Storm,Raj Kumar,1583,832,Non-fiction,yes,4.5
+77,The Silent Forest,Sophie Ivanov,1720,1307,Biography,yes,4.4
+78,The Crimson Journey,Liam Johnson,1530,1209,Science Fiction,yes,2
+79,The Fading Journey,Noah Johnson,1630,1117,Romance,yes,3
+80,The Burning Code,Aisha Kumar,1513,1094,Fantasy,no,2.7
+81,The Lost World,Aisha Johnson,1729,218,Non-fiction,no,3.4
+82,The Fading Empire,Liam Ivanov,1883,1047,History,yes,2.2
+83,The Lost Code,Raj Tanaka,1791,742,Fantasy,yes,2
+84,The Crimson Echoes,Raj Ivanov,1815,1281,Thriller,yes,0.6
+85,The Burning Forest,Sophie Smith,2013,1449,Non-fiction,yes,0.7
+86,The Shattered Journey,Amara Smith,1566,579,Science Fiction,no,1.9
+87,The Fading Fire,Hiroshi Petrov,1951,686,Science Fiction,no,1.7
+88,The Hidden World,Hiroshi Kumar,1550,426,Romance,no,2.4
+89,The Golden World,Raj Tanaka,1764,1440,History,yes,2.9
+90,The Fading Echoes,James Petrov,2019,166,Non-fiction,no,4.3
+91,The Fading Journey,Liam Tanaka,1839,1222,History,yes,2.4
+92,The Forgotten Echoes,Maria Dubois,1766,475,Software,yes,1.5
+93,The Hidden Forest,Noah Martinez,1853,1046,Romance,yes,4
+94,The Hidden World,Raj Fernandez,1537,610,Science Fiction,no,0.1
+95,The Crimson Forest,Maria Ivanov,1975,857,Mystery,yes,3.7
+96,The Lost Legacy,Maria Kumar,1910,1285,Biography,no,1.4
+97,The Silent Empire,Maria Smith,1603,1439,Poetry,no,3.9
+98,The Silent Journey,Liam Johnson,1737,859,Mystery,no,0.4
+99,The Burning Forest,Noah Tanaka,1704,104,Biography,no,3.1
+100,The Silent Journey,Sophie Petrov,1869,1486,Mystery,yes,1.8

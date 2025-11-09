@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ReadingList.Cli.Menus;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        Console.WriteLine("Welcome to the Reading List Application!");
+        await Menu.MenuLoop();
+    }
+}
