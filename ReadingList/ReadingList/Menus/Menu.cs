@@ -73,8 +73,8 @@ internal class Menu
             }
             finally
             {
-                Console.WriteLine("Press to continue");
-                Console.ReadLine();
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey(true);
                 Console.Clear();
             }
         }

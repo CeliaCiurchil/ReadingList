@@ -1,5 +1,6 @@
 ﻿using ReadingList.Application.Interfaces;
 using ReadingList.Domain;
+using ReadingList.Domain.Extensions;
 using ReadingList.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -62,7 +63,7 @@ public class BookService
     {
         var all = Repository.GetAll();
         if (!all.IsSuccess) return Result<IEnumerable<Book>>.Failure(all.Error!);
-        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Finished).ToList()); ;
+        return Result<IEnumerable<Book>>.Success(all.Value!.Where(b => b.Finished).ToList());
     }
 
     public Result<IEnumerable<Book>> TopN(int n)
@@ -105,9 +106,9 @@ public class BookService
     {
         var all = Repository.GetAll();
         if (!all.IsSuccess) return Result<double>.Failure(all.Error!);
-        var finished = all.Value!.Where(b => b.Finished);
-        if (!finished.Any()) return Result<double>.Success(0.0);
-        return Result<double>.Success(finished.Average(b => b.Rating));
+
+        var avg = all.Value!.Where(b => b.Finished).AverageRating();
+        return Result<double>.Success(avg);
     }
 
     public Result<int> PagesInGenre(string genre)

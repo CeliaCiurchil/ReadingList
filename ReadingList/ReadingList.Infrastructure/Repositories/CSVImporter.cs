@@ -1,5 +1,6 @@
 ﻿using ReadingList.Application.Interfaces;
 using ReadingList.Domain;
+using ReadingList.Domain.Extensions;
 using ReadingList.Domain.Models;
 using System.Globalization;
 
@@ -23,11 +24,11 @@ public class CSVImporter : IImporter<Book>
 
                     var fields = line.Split(',');
                     int id = int.Parse(fields[0]);
-                    string title = fields[1];
-                    string author = fields[2];
+                    string title = fields[1].ToTitleCaseSafe();
+                    string author = fields[2].ToTitleCaseSafe();
                     int yearPublished = int.Parse(fields[3], CultureInfo.InvariantCulture);
                     uint pages = uint.Parse(fields[4], CultureInfo.InvariantCulture);
-                    string genre = fields[5];
+                    string genre = fields[5].ToTitleCaseSafe();
                     double rating = double.Parse(fields[7], CultureInfo.InvariantCulture);
                     string finishedString = fields[6];
                     bool finished = finishedString is "yes" or "y" or "true";
